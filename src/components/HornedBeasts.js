@@ -4,7 +4,6 @@ import Card from "react-bootstrap/Card";
 class HornedBeasts extends React.Component {
   constructor(props) {
     super(props);
-    // this.Heart = '❤️';
     this.state = {
       votes: 0,
     };
@@ -26,25 +25,13 @@ class HornedBeasts extends React.Component {
           />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
-            {/* <Card.Text>{this.props.keyword}</Card.Text> */}
 
             <Card.Text>{this.props.description}</Card.Text>
             <Card.Text>
               {"❤️"} {this.state.votes}
             </Card.Text>
-
-            {/* <Button variant="primary" onClick={this.addAnotherClick}>
-              Click Me {this.state.votes}{" "}
-            </Button> */}
           </Card.Body>
         </Card>
-        {/* 
-        <h2>{this.props.title}</h2>
-        <p>{this.props.description}</p>
-        <img
-          src={this.props.imgUrl}
-          alt={this.props.title}
-          title={this.props.title}/> */}
       </div>
     );
   }
