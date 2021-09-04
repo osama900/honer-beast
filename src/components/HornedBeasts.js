@@ -9,11 +9,13 @@ class HornedBeasts extends React.Component {
     };
   }
 
-  addAnotherClick = (e) => {
+  addAnotherClick = () => {
     this.setState({
       votes: this.state.votes + 1,
     });
+    this.props.displayModal(this.props.title);
   };
+
   render() {
     return (
       <div>
