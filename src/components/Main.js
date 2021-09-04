@@ -1,12 +1,12 @@
 import React from "react";
 import HornedBeasts from "./HornedBeasts";
-//import SelectedBeast from "./SelectedBeast";
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       show: false,
+      selectedHorns: {},
     };
   }
 
@@ -16,11 +16,12 @@ class Main extends React.Component {
         {this.props.HornedData.map((value) => {
           return (
             <HornedBeasts
+              image_url={value.image_url}
               title={value.title}
               description={value.description}
-              image_url={value.image_url}
-              horns={value.horns}
               keyword={value.keyword}
+              horns={value.horns}
+              selectedHorns={this.props.selectedHorns}
               displayModal={this.props.displayModal}
             />
           );
